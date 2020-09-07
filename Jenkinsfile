@@ -38,7 +38,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('pruebasSonarqube') {
-                    sh './gradlew sonarqube -Dsonar.projectKey=pruebasJenkinsCalculator -Dsonar.host.url=http://localhost:9000 -Dsonar.login=d41febedb3d80c4240e7ff0920d0767a6b0cf236'
+                    sh './gradlew sonarqube -Dsonar.projectKey=pruebasJenkinsCalculator -Dsonar.host.url=http://localhost:9001 -Dsonar.login=d41febedb3d80c4240e7ff0920d0767a6b0cf236'
                 }
             }
         }
